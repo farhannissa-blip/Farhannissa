@@ -1,0 +1,6 @@
+{
+  "name": "Galactic Division Wars 3D",
+  "description": "Media Pembelajaran SDN 66 Banda Aceh: Game edukasi matematika 3D pembagian bersisa menggunakan metode GASING dengan petualangan perang pesawat luar angkasa melawan invasi UFO Alien di 8 planet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
