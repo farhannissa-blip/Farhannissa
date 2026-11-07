@@ -1091,6 +1091,7 @@ export default function App() {
         playerLives={lives}
         shieldActive={shieldActive}
         isPaused={isPaused || activeModal !== 'NONE'}
+        isPlaying={screenState === 'PLAYING'}
         graphicsQuality={settings.graphicsQuality}
         onSelectEnemy={(id) => setSelectedEnemyId(id)}
       />
@@ -1465,8 +1466,9 @@ export default function App() {
 
           {/* Flat Control Hint Line */}
           <div className="text-center text-[11px] sm:text-xs font-mono text-slate-400">
-            Media Pembelajaran SDN 66 Banda Aceh · Sentuh Pilihan A/B/C/D atau
-            Tombol 1–4 Menembak · Ketuk UFO Kunci Target · Shift Boost Turbo
+            Media Pembelajaran SDN 66 Banda Aceh · Kursor Kemudi / Tombol Panah
+            Gerak Pesawat (Kiri, Kanan, Depan, Belakang) · Pilihan A/B/C/D
+            Tembakan Meriam Utama
           </div>
         </div>
       )}
@@ -2270,7 +2272,7 @@ export default function App() {
       {activeModal === 'GASING_TUTORIAL' && (
         <CaptainAstroTutorialModal
           onClose={() => setActiveModal('NONE')}
-          onStartCategory1Battle={() => {
+          onStartBattle={() => {
             handleSelectCategoryWithTransition(1);
             setActiveModal('NONE');
             if (screenState === 'MAIN_MENU') {
